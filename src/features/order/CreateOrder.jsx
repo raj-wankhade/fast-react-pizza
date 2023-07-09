@@ -71,12 +71,12 @@ function CreateOrder() {
           />
           <label htmlFor="priority">Want to yo give your order priority?</label>
         </div>
-        <div>
-          <input type="hidden" name="cart" value={JSON.stringify(cart)} />
-        </div>
 
         <div>
-          <button>Order now</button>
+          <input type="hidden" name="cart" value={JSON.stringify(cart)} />
+          <button className="text-sm uppercase bg-yellow-400 px-4 py-3 font-semibold text-stone-800 tracking-wide rounded-full hover:bg-yellow-300 transition-colors duration-300 outline-none focus:bg-yellow-300 focus:ring focus:ring-yellow-300 focus:ring-offset-2 disabled:cursor-not-allowed ">
+            Order now
+          </button>
         </div>
       </Form>
     </div>
