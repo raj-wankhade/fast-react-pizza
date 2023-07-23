@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form, redirect, useActionData } from "react-router-dom";
 import { createOrder } from "../../services/apiRestaurant";
+import Button from "../../ui/Button";
 // https://uibakery.io/regex-library/phone-number
 const isValidPhone = (str) =>
   /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/.test(
@@ -74,16 +75,14 @@ function CreateOrder() {
             id="priority"
             value={withPriority}
             onChange={(e) => setWithPriority(e.target.checked)}
-            className="w-6 h-6 accent-yellow-300 focus:ring focus:ring-yellow-400 focus:ring-offset-2 outl  ine-none "
+            className="w-6 h-6 accent-yellow-300 focus:ring focus:ring-yellow-400 focus:ring-offset-2 outline-none "
           />
           <label htmlFor="priority">Want to yo give your order priority?</label>
         </div>
 
         <div>
           <input type="hidden" name="cart" value={JSON.stringify(cart)} />
-          <button className="text-sm uppercase bg-yellow-400 px-4 py-3 font-semibold text-stone-800 tracking-wide rounded-full hover:bg-yellow-300 transition-colors duration-300 outline-none focus:bg-yellow-300 focus:ring focus:ring-yellow-300 focus:ring-offset-2 disabled:cursor-not-allowed ">
-            Order now
-          </button>
+          <Button>Place order</Button>
         </div>
       </Form>
     </div>
