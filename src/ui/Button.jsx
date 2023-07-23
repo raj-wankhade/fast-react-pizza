@@ -11,7 +11,7 @@ export default function Button({ children, disabled, to }) {
     );
   }
   return (
-    <button disabled={disabled} className="">
+    <button disabled={disabled} className={className}>
       {children}
     </button>
   );
